@@ -9,7 +9,7 @@ function main_vehicles_current_custom_showContentThisFrame(playerGroup)
 	for i = 0, liveryCount do
 		local livery = GetLiveryName(pedVehicle, i)
 		livery = GetLabelText(livery) ~= "NULL" and GetLabelText(livery) or "Livery #" .. i
-		table.insert(liveryList, livery)
+		liveryList[#liveryList+1] = livery
 	end
 	if liveryList[_var.menu.liveryArrayIndex] == nil then
 		_var.menu.liveryArrayIndex = 1

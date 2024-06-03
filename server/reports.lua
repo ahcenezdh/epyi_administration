@@ -64,7 +64,7 @@ function addReport(xPlayer, reason)
 			takerName = nil,
 		},
 	}
-	table.insert(_var.reports.list, report)
+	_var.reports.list[#_var.reports.list+1] = report
 	sendReportsToStatebag()
 end
 

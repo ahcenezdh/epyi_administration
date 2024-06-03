@@ -1,7 +1,9 @@
----getPlayerGroup → get the staff group of a player
----@return group
-ESX.RegisterServerCallback("epyi_administration:getPlayerGroup", function(source, cb, target)
-	local xTarget = ESX.GetPlayerFromId(target)
-	local group = xTarget.getGroup()
-	cb(group)
-end)
+---doesPlayerHavePermission → get the if the staff has enough permission
+---@return boolean
+function doesPlayerHavePermission(player)
+	if not (Config.Groups[player.getGroup()]) then
+		xPlayer.kick(_U("insuficient_permissions"))
+		return false
+	end
+	return true
+end

@@ -4,13 +4,13 @@
 --- created at [04/08/2023 14:21]
 ---
 
-fx_version("cerulean")
-game("gta5")
+fx_version "cerulean"
+game "gta5"
 
-name("epyi_administration")
-description("A RageUI Administration for ESX Legacy 1.7.5 or newer")
-author("Epyi (https://discord.gg/VyRPheG6Es)")
-version("0.2.0")
+name "epyi_administration"
+description "A RageUI Administration for ESX Legacy 1.7.5 or newer"
+author "Epyi (https://discord.gg/VyRPheG6Es)"
+version "0.2.0"
 
 shared_scripts({
 	"shared/locale.lua",
@@ -20,7 +20,7 @@ shared_scripts({
 	"config.lua",
 })
 
-client_scripts({
+client_scripts {
 	"src/RMenu.lua",
 	"src/menu/RageUI.lua",
 	"src/menu/Menu.lua",
@@ -39,9 +39,9 @@ client_scripts({
 	"client/misc.lua",
 	"client/threads.lua",
 	"client/menus/*.lua",
-})
+}
 
-server_scripts({
+server_scripts {
 	"@oxmysql/lib/MySQL.lua",
 	"server/misc.lua",
 	"server/version.lua",
@@ -54,10 +54,10 @@ server_scripts({
 	"server/reports.lua",
 	"server/spectate.lua",
 	"server/favorites_vehicles.lua",
-})
+}
 
-dependencies({
+dependencies {
 	"es_extended",
 	"oxmysql",
 	"esx_status",
-})
+}

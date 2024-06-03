@@ -86,6 +86,9 @@ end
 
 RegisterNetEvent("epyi_administration:setDeathStatus", function(isDead)
 	local xPlayer = ESX.GetPlayerFromId(source)
+	if not (doesPlayerHavePermission(xPlayer)) then
+		return
+	end
 	if type(isDead) == "boolean" then
 		MySQL.update("UPDATE users SET is_dead = ? WHERE identifier = ?", { isDead, xPlayer.identifier })
 		isDeadState(source, isDead)
